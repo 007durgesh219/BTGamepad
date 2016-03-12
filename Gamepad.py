@@ -44,13 +44,13 @@ class Gamepad:
         i = 0
         while True:
             try:
-				self.dev = InputDevice("/dev/input/event"+str(i))
-				if "keyboard" in str(self.dev):
+		self.dev = InputDevice("/dev/input/event"+str(i))
+		if "keyboard" in str(self.dev):
                     break
             except Exception, e:
                 print "Keyboard not found."
                 break
-            i += 1
+                i += 1
 		print "keyboard found "+str(self.dev)
 
     def change_state(self, event):
